@@ -1,0 +1,173 @@
+:root{
+    --primary-color: #23242a;
+    --secondary-color: #1c1c1c;
+    --formulary-color: #222;
+    --font-h1: 2.5rem;
+    --font: 'Clash Display', sans-serif;
+    --border-radius: 0.8rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+h1{
+    font-size: var(--font-h1);
+    font-family: var(--font);
+    letter-spacing: 0.3rem;
+    text-align: center;
+}
+.content-main{
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-form::before{
+    content: "";
+    position: absolute;
+    width: 58rem;
+    height: 42rem;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right ;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.container-form::after{
+    content: "";
+    position: absolute;
+    width: 58rem;
+    height: 42rem;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right ;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.line{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.line::after{
+    content: "";
+    position: absolute;
+    width: 58rem;
+    height: 42rem;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, transparent, #d10f36, #d10f36, #d10f36);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -4.5s;
+    
+}
+.line::before{
+    content: "";
+    position: absolute;
+    width: 58rem;
+    height: 42rem;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, transparent, #d10f36, #d10f36, #d10f36);
+    z-index: 1;
+    transform-origin: bottom right ;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+    
+}
+.container-form{
+    color: #fff;
+    position: relative;
+    width: 58rem;
+    height: 42rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.container-form form{
+    position: absolute;
+    inset: 0.4rem;
+    background-color: var(--formulary-color);
+    padding: 5rem 4rem;
+    border-radius: var(--border-radius);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.inputForm{
+    position: relative;
+    width: 40rem;
+    margin-top: 3.5rem;
+}
+.inputForm input{
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 2rem 1rem 1rem;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    z-index: 9;
+}
+.inputForm label{
+    position: absolute;
+    left: 0;
+    padding: 2rem 0rem 1rem;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputForm input:valid ~ label, .inputForm input:focus ~ label{
+    color: #fff;
+    font-size: 1.1rem;
+    transform: translateY(-3.8rem);
+}
+.inputForm i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.inputForm input:valid ~ i, .inputForm input:focus ~ i{
+    height: 3.8rem;
+}
+.submit{
+    border: none;
+    outline: none;
+    margin-top: 5.6rem;
+    cursor: pointer;
+    padding: 0.9rem 2.5rem;
+}
