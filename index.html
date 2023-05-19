@@ -13,25 +13,38 @@
         <section class="content-main">
             <div class="container-form">
                 <i class="line"></i>
-                <form action="" method="post">
+                <form id="form">
                     <h1>Informações Pessoais</h1>
                     <hr>
                     <div class="inputForm">
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" id="nome" required>
                         <label for="name">Nome:</label>
                         <i></i>
                     </div>
                     <div class="inputForm">
-                        <input type="text" name="idade" required>
+                        <input type="text" name="idade" id="idade" required>
                         <label for="idade">idade:</label>
                         <i></i>
                     </div>
-             
+                    <div class="inputForm">
+                        <input type="text" name="curso" id="curso" required>
+                        <label for="name">Curso:</label>
+                        <i></i>
+                    </div>
+                    <button class="btn-modal" type="button" onclick="exibirModal()">Exibir Usúarios Cadastrados</button>
                     <input type="submit" name="submit" value="Enviar" class="submit">
                 </form>
             </div>
             </form>
         </section>
+        <div id="modalDados" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="fecharModal()">&times;</span>
+              <h2>Dados Salvos</h2>
+              <div id="dadosContainer"></div>
+            </div>
+          </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
